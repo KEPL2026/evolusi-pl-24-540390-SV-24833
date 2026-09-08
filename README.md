@@ -57,3 +57,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Fitur: Catatan Evolusi
+
+CRUD sederhana untuk mencatat entri perubahan/evolusi proyek.
+
+| Method | Route            | Fungsi                  |
+|--------|------------------|--------------------------|
+| GET    | `/catatan`       | Daftar catatan           |
+| GET    | `/catatan/create`| Form tambah catatan      |
+| POST   | `/catatan`       | Simpan catatan baru      |
+| DELETE | `/catatan/{id}`  | Hapus catatan            |
+
+Model `App\Models\CatatanEvolusi` menyimpan `judul`, `deskripsi`, `tanggal`.
+Diuji lewat `tests/Feature/CatatanEvolusiTest.php` (dijalankan otomatis oleh CI).
